@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const ExpenseItem = () => {
+export const Alert = () => {
     return (
         <div>
-            ExpenseItem
+            Alert
         </div>
     )
 }
