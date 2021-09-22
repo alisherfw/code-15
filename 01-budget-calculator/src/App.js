@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
-  })
+  }, [expenses])
 
   const handleCharge = e => {
     setCharge(e.target.value)
