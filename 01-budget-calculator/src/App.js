@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { ExpenseForm } from './components/ExpenseForm';
 import { Alert } from './components/Alert';
@@ -21,6 +21,10 @@ function App() {
   const [edit, setEdit] = useState(false);
   
   const [id, setId] = useState(0);
+
+  useEffect(() => {
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+  })
 
   const handleCharge = e => {
     setCharge(e.target.value)
